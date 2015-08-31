@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/artc_background">
+
+    <SurfaceView
+        android:id="@+id/adas_playersurface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imageView_InitRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/initrow"
+        android:layout_below="@+id/adas_playersurface"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/imageView_Euslope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/euslope"
+        android:scaleType="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="up"
+            android:layout_alignTop="@+id/toggleButton_Euslope_InitRow"
+            android:layout_toLeftOf="@+id/btnSend"
+            android:layout_toStartOf="@+id/btnSend" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton_Euslope_InitRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOn="紅線"
+            android:textOff="藍線"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="down"
+            android:layout_below="@+id/btnText"
+            android:layout_toRightOf="@+id/togglebtn_ADAS"
+            android:layout_toEndOf="@+id/togglebtn_ADAS" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Send"
+
+            />
+
+        <Button
+            android:id="@+id/btnText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="text"
+
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout8"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <SeekBar
+            android:id="@+id/seekBar_InitRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="540"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/holo_blue_light" />
+
+        <SeekBar
+            android:id="@+id/seekBar_Euslope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="540"
+            android:background="@android:color/holo_red_light"
+            android:layout_above="@+id/linearLayout8"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout9"
+        android:layout_below="@+id/linearLayout2"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LDW/FCW靈敏度 :"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:id="@+id/tvLDW_FCW"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerLDW_FCW_sensitivity"
+             />
+
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/togglebtn_ADAS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textOn="ADAS_ON"
+        android:textOff="ADAS_OFF"
+        android:layout_below="@+id/linearLayout9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
